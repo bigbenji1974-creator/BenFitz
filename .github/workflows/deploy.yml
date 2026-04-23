@@ -10,7 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
       - name: FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
@@ -20,4 +21,6 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftp
           port: 21
-          server-dir: /home/u887596075/domains/benfitzphotos.com/public_html/
+          server-dir: public_html/
+          dangerous-clean-slate: true
+          log-level: verbose
