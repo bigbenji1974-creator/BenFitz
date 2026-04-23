@@ -1,0 +1,3 @@
+- [x] Add transparent navbar styling in `css/style.css`
+- [x] Keep existing desktop/mobile nav behavior unchanged
+- [x] Mark completion after style update
